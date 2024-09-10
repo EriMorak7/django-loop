@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dictionary Example</title>
+</head>
+<body>
+    <h1>Dictionary Contents</h1>
+    
+    <!-- Loop through the dictionary items -->
+    {% for key, value in my_dict.items %}
+        <p><strong>{{ key }}:</strong> {{ value }}</p>
+    {% endfor %}
+</body>
+</html>

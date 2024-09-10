@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{{ page_title|title }}</title>
+</head>
+<body>
+    <h1>{{ page_title }}</h1>
+
+    <!-- Conditional if statement -->
+    {% if show_message %}
+        <p>{{ message }}</p>
+    {% else %}
+        <p>No message available.</p>
+    {% endif %}
+
+    <!-- For loop to display the items in the list -->
+    <ul>
+        {% for item in items %}
+            <li>{{ item|upper }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
