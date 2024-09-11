@@ -1,11 +1,15 @@
+# views.py
 from django.shortcuts import render
 
-def new_view(request):
-    # Context data (can include variables, lists, etc.)
+
+def home(request):
+    return render(request, 'dtls/home.html')
+
+def catalog(request):
     context = {
-        'page_title': 'New View Page',
-        'items': ['Apple', 'Banana', 'Cherry'],
-        'show_message': True,
-        'message': 'Welcome to the new view!'
+        'To Kill a Mockingbird': 'Harper Lee',
+        '1984': 'George Orwell',
+        'Moby Dick': 'Herman Melville',
+        'The Great Gatsby': 'F. Scott Fitzgerald',
     }
-    return render(request, 'dtl/dtl.html', context)
+    return render(request, 'dtls/catalog.html', context)

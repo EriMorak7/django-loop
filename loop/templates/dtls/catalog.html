@@ -1,0 +1,14 @@
+{% extends 'partials/base.html' %}
+
+{% block title %}Catalog{% endblock %}
+
+    <h1>Book List</h1>
+    <ul>
+        {% for title, author in catalog %}
+            <li><strong>{{ title }}</strong> by {{ author }}</li>
+        {% empty %}
+            <li>No books available.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

@@ -1,0 +1,9 @@
+{% extends 'partials/base.html' %}
+
+{% block title %}Home - Library Management System{% endblock %}
+
+{% block content %}
+    <h2>Welcome to Our Library</h2>
+    <p>Discover a wide range of books, magazines, and other resources.</p>
+    <p>Explore our <a href="{% url 'catalog' %}">catalog</a> to find your next read!</p>
+{% endblock %}

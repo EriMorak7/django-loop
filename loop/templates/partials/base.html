@@ -1,16 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-           <title>{% block title %}Default Title{% endblock %}</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Library Management System{% endblock %}</title>
 </head>
 <body>
-    {% include 'partials/header.html' %}
-    
-    <!-- Block where child templates will inject content -->
-    <div class="content">
-        {% block content %}{% endblock content %}
-    </div>
-    
-    {% include 'partials/footer.html' %}
+    <header>
+        <div class="container">
+            <h1>Library Management System</h1>
+            <nav>
+                <ul>
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li><a href="{% url 'catalog' %}">Catalog</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            {% block content %}
+            <!-- Default content or placeholder for child templates -->
+            {% endblock %}
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Library Management System. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>
